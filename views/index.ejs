@@ -22,8 +22,8 @@
         <% if(allFiles){ %>
         <% for(let i=0;i<allFiles.length;i++) {  %>
             <div class="imageItem">
-                <a href="uploads/<%=allFiles[i]%>" target="_blank"><img class="hover" src="uploads/<%=allFiles[i]%>" alt="<%=allFiles[i].split('.')[0]%>"></img></a>
-                <a href="uploads/<%=allFiles[i]%>" download>Download</a>
+                <a href="/uploads/<%=allFiles[i]%>" target="_blank"><img class="hover" src="/uploads/<%=allFiles[i]%>" alt="<%=allFiles[i].split('.')[0]%>"></img></a>
+                <a href="/uploads/<%=allFiles[i]%>" download>Download</a>
             </div>
         <% } }%>
 
