@@ -13,13 +13,12 @@ app.get("/",(req,res)=>
 })
 
 
-var directoryPath = path.join(__dirname, '/public/uploads');
 
 const upload=multer({
     storage:multer.diskStorage({
         destination:(req,file,cb)=>
         {
-            cb(null,"public/uploads");
+            cb(null,"/uploads");
         },
         filename:(req,file,cb)=>
         {
