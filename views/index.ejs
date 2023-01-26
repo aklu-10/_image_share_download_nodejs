@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form action="/uploadPicture" 
+        enctype="multipart/form-data" method="POST">
+        
+            <span>Upload Picture:</span>  
+            <input type="file" name="mypic" accept="image/*" multiple required/> <br>
+            <input type="submit" value="submit"> 
+    </form>
+
+    <div class="imageContainer">
+        <% if(allFiles){ %>
+        <% for(let i=0;i<allFiles.length;i++) {  %>
+            <div class="imageItem">
+                <a href="/uploads/<%=allFiles[i]%>" target="_blank"><img class="hover" src="/uploads/<%=allFiles[i]%>" alt="<%=allFiles[i].split('.')[0]%>"></img></a>
+                <a href="/uploads/<%=allFiles[i]%>" download>Download</a>
+            </div>
+        <% } }%>
+
+    </div>
+
+
+
+    <script src="/js/script.js"></script>
+</body>
+
+
+</html>
